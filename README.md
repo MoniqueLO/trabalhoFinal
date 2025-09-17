@@ -11,17 +11,11 @@ Este projeto é uma API REST para cadastro de lojas, com autenticação de usuá
 ## Como rodar
 
 1. Instale as dependências:
-   ```
-npm install
-   ```
+   ```npm install ```
 2. Inicie o servidor:
-   ```
-npm start
-   ```
+```npm start```
 3. Para rodar os testes:
-   ```
-npx mocha
-   ```
+   ```npx mocha```
 
 ## Endpoints principais
 - `POST /auth/login` — Autenticação (envie nome e senha)
