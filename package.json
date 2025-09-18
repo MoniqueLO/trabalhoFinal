@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-  "start": "node rest/server.js",
-    "test": "mocha rest/test"
+    "start": "node rest/server.js",
+    "test": "mocha rest/test",
+    "start:graphql": "node graphql/graphqlServer.js",
+    "test:graphql": "mocha graphql/*.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "apollo-server-express": "^3.13.0",
     "bcryptjs": "^3.0.2",
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
+    "graphql": "^16.11.0",
     "jsonwebtoken": "^9.0.2",
     "swagger-ui-express": "^5.0.1"
   },
