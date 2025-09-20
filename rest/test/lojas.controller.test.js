@@ -10,7 +10,6 @@ describe('Controller de lojas', () => {
   beforeEach(() => {
     app = express();
     app.use(express.json());
-    // sempre insere um token válido
     app.use((req, res, next) => {
       req.headers['authorization'] = 'Bearer ' + gerarTokenTeste();
       next();
@@ -36,7 +35,6 @@ describe('Controller de lojas', () => {
   });
 });
 
-// Função para gerar token válido para os testes
 const userService = require('../../src/services/userService');
 function gerarTokenTeste() {
   return userService.autenticar('admin', '123456').token;
