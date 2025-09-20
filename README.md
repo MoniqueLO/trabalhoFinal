@@ -1,4 +1,3 @@
-
 # API de Cadastro de Lojas (REST e GraphQL)
 
 Este projeto é uma API para cadastro de lojas, com autenticação, disponível em REST e GraphQL. 
@@ -28,8 +27,21 @@ Este projeto é uma API para cadastro de lojas, com autenticação, disponível 
 - `POST /lojas` — Cadastrar loja (requer token)
 - `GET /lojas` — Listar lojas (requer token)
 
+
 ## Endpoint GraphQL
-- `POST /graphql` 
+- `POST /graphql`
+
+### Exemplo de query para listar lojas
+
+```graphql
+query ExampleQuery($token: String!) {
+  lojas(token: $token) {
+    id
+    nome
+    endereco
+  }
+}
+```
 
 ### Exemplos de mutations GraphQL
 
